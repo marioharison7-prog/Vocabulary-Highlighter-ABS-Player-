@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vocabify</title>
+  <link rel="stylesheet" href="popup.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h3 class="app-title"><i class="fas fa-highlighter"></i> Vocabify</h3>
+
+    <div class="stats-card">
+      <p id="coloredCount" class="highlight-count">Colored words: <span class="count-number">0</span></p>
+    </div>
+
+    <div class="search-section">
+      <i class="fas fa-search search-icon"></i>
+      <input type="text" id="searchInput" placeholder="Search a word..." class="search-input">
+    </div>
+
+    <div id="colorBreakdown" class="color-breakdown"></div>
+
+    <div class="action-buttons">
+      <button id="export" class="btn btn-export"><i class="fas fa-file-export"></i> Export Colors</button>
+      <button id="import" class="btn btn-import"><i class="fas fa-file-import"></i> Import Colors</button>
+      <button id="openTab" class="btn btn-open-tab"><i class="fas fa-external-link-alt"></i> Open Vocabulary Tab</button>
+      <button id="openSentencesTab">Sentences Mode</button>
+    </div>
+
+    <textarea id="importExportArea" placeholder="Paste JSON here to import or see exported data..." class="json-textarea"></textarea>
+
+    <p class="footer-text">Created with passion by Adem Belakdar <span class="heart-icon"><i class="fas fa-heart"></i></span> (with AI assistance)</p>
+  </div>
+
+  <!-- Word Action Popup -->
+  <div id="wordActionPopup" class="word-action-popup">
+    <h3 class="popup-title">Actions for: <span id="selectedWord" class="selected-word-display"></span></h3>
+
+    <div id="colorButtonsContainer" class="popup-color-buttons">
+      <!-- Predefined color buttons will be dynamically added here -->
+    </div>
+
+    <button id="removeWordBtn" class="btn btn-remove-word"><i class="fas fa-trash-alt"></i> Remove Word</button>
+    <button id="closePopupBtn" class="btn btn-close-popup"><i class="fas fa-times-circle"></i> Close</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

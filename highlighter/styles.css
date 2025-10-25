@@ -1,0 +1,11 @@
+/* تأكد أن نافذة الترجمة تسمح بالنقر */
+.caption-window {
+  pointer-events: auto !important;
+  user-select: text !important;
+}
+
+/* الكلمات المغلفة داخل span قابلة للنقر وتتغير بسلاسة */
+span[data-word] {
+  cursor: pointer;
+  transition: color 0.2s;
+}

@@ -1,0 +1,78 @@
+<!-- --- START OF FILE sentences.html --- -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vocabify - Your Sentences</title>
+<link rel="stylesheet" href="sentences.css"> <!-- Link to the refashioned CSS -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <h1>Sentence Collection</h1>
+
+  <p id="sentenceCount">Total Sentences: <span class="count-number">0</span></p>
+  
+  <!-- Color count display -->
+  <div id="colorCount" class="color-count">
+    <!-- JavaScript will populate color counts here -->
+  </div>
+
+  <div class="search-section">
+    <i class="fas fa-search search-icon" aria-hidden="true"></i>
+    <input type="text" id="searchSentenceInput" placeholder="Search sentences and definitions..." aria-label="Search sentences">
+  </div>
+
+  <!-- Time Filter -->
+  <div class="time-filter">
+  <label for="timeFilterSelect">Filter by time:</label>
+  <select id="timeFilterSelect" aria-label="Filter sentences by time">
+    <option value="all">All</option>
+    <option value="last1h">Last 1 hour</option>
+    <option value="last24h">Last 24 hours</option>
+    <option value="last7d">Last 7 days</option>
+    <option value="last30d">Last 30 days</option>
+  </select>
+</div>
+
+
+  <div id="sentenceList" class="sentence-list" role="list">
+    <p class="empty-list-message">Start adding sentences to build your collection!</p>
+  </div>
+
+  <div class="action-buttons">
+    <input type="text" id="newSentenceInput" placeholder="Type a new sentence here..." aria-label="New sentence input">
+    <button id="addSentenceBtn" aria-label="Add new sentence"><i class="fas fa-plus" aria-hidden="true"></i> Add Sentence</button>
+    <button id="exportSentences" aria-label="Export all sentences to JSON"><i class="fas fa-file-export" aria-hidden="true"></i> Export</button>
+    <button id="importSentences" aria-label="Import sentences from JSON"><i class="fas fa-file-import" aria-hidden="true"></i> Import</button>
+  </div>
+
+  <textarea id="importExportArea" placeholder="Paste JSON formatted sentences here for import, or copy exported data." aria-label="Import/Export JSON data area"></textarea>
+</div>
+
+<!-- Sentence Action Popup -->
+<div id="sentenceActionPopup" class="popup" role="dialog" aria-modal="true" aria-labelledby="selectedSentence">
+  <h3>Sentence Details: <span id="selectedSentence"></span></h3>
+  
+  <label for="sentenceDefinition">Definition:</label>
+  <textarea id="sentenceDefinition" placeholder="Add or edit definition..." aria-label="Sentence definition"></textarea>
+  <!-- Save button for explicit saving -->
+  <button id="saveSentenceBtn" aria-label="Save sentence definition"><i class="fas fa-save"></i> Save</button>
+  
+  <label>Highlight Color:</label>
+  <div id="sentenceColorButtons">
+    <!-- Color buttons will be inserted here by JavaScript -->
+  </div>
+  
+  <div class="popup-buttons">
+    <button id="removeSentenceBtn" aria-label="Remove this sentence"><i class="fas fa-trash-alt" aria-hidden="true"></i> Remove</button>
+    <button id="closeSentencePopupBtn" aria-label="Close sentence details"><i class="fas fa-times-circle" aria-hidden="true"></i> Close</button>
+  </div>
+</div>
+
+<script  src="sentences.js"></script>
+</body>
+</html>

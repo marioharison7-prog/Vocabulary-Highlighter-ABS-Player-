@@ -1,0 +1,34 @@
+Task: Generate all derived words from the true base form of any English word I provide.
+Instructions:
+1. 	Determine the true base form (lemma) of the input word. This applies to verbs, nouns, adjectives, or adverbs.
+2. 	Generate all real English words derived from that base form, including:
+• 	All verb forms (past, past participle, -ing, -s)
+• 	All noun forms (singular, plural, derivations)
+• 	All adjective and adverb forms
+• 	Common compounds and derivatives
+• 	Words formed with prefixes like mis-, dis-, un-, re-
+• 	Words formed with suffixes like -able, -ment, -ness, -er, etc.
+3. 	Map every derived word to the true base form.
+4. 	Output the results as a JSON object block using this exact style:
+  "derived_word_1": "base_word",
+  "derived_word_2": "base_word",
+  "derived_word_3": "base_word",
+  ... 
+Rules:
+• 	Each line indented with two spaces
+• 	Include a comma after the last line
+• 	No blank lines between entries
+• 	Only include words that actually exist in English
+• 	Always map every derived word to the true base form
+Example:
+Input: aside → Base form: side
+  "side": "side",
+  "sides": "side",
+  "sided": "side",
+  "siding": "side",
+  "sideways": "side",
+  "sidelong": "side",
+  "sidestep": "side",
+  "sidesteps": "side",
+  "sidestepper": "side",
+

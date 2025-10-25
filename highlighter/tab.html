@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vocabify - Vocabulary Tab</title>
+<link rel="stylesheet" href="tab.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <h1>all vocab</h1>
+  
+  <p id="coloredCount">Colored words: <span class="count-number">0</span></p>
+  
+  <div id="colorBreakdownSummary" class="summary-container"></div>
+  
+  <div class="search-section">
+    <i class="fas fa-search search-icon"></i>
+    <input type="text" id="searchInput" placeholder="Search words...">
+  </div>
+  
+  <div id="colorBreakdown" class="detailed-container"></div>
+  
+  <div class="action-buttons">
+    <button id="export"><i class="fas fa-file-export"></i> Export</button>
+    <button id="import"><i class="fas fa-file-import"></i> Import</button>
+  </div>
+  
+  <textarea id="importExportArea" placeholder="JSON goes here..."></textarea>
+</div>
+
+<div id="wordActionPopup" class="popup">
+  <h3>Actions for: <span id="selectedWord"></span></h3>
+  <div id="colorButtonsContainer"></div>
+  <button id="removeWordBtn"><i class="fas fa-trash-alt"></i> Remove Word</button>
+  <button id="closePopupBtn"><i class="fas fa-times-circle"></i> Close</button>
+</div>
+
+<script src="tab.js"></script>
+</body>
+</html>

@@ -1,0 +1,338 @@
+body {
+  font-family: 'Montserrat', sans-serif; /* Modern font */
+  background-color: #0D0D0D; /* Slightly darker background for depth */
+  color: #F0F0F0; /* Brighter text for contrast */
+  padding: 20px;
+  margin: 0;
+  display: flex; /* Use flexbox for centering */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ensure it takes full viewport height */
+  box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+.container {
+  max-width: 900px; /* Slightly narrower for a more focused look */
+  width: 100%; /* Ensure it's responsive */
+  margin: 0 auto;
+  background-color: #1A1A1A; /* Darker container */
+  padding: 40px; /* More padding */
+  zoom: 200%; /* Default zoom */
+  border-radius: 20px; /* More rounded corners */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* Subtle shadow for depth */
+  border: 1px solid rgba(50, 50, 50, 0.7); /* Light border for definition */
+}
+
+h1 {
+  color: #8A2BE2; /* A richer, more modern purple */
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.8em; /* Larger title */
+  font-weight: 700; /* Bolder */
+  letter-spacing: 1.5px; /* Spaced out letters */
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Title shadow */
+}
+
+#coloredCount {
+  font-size: 28px; /* Larger count */
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #00BCD4; /* A vibrant teal for emphasis */
+}
+
+.summary-container {
+  display: flex;
+  gap: 25px; /* More space between items */
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.summary-container .color-summary-item {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* More space */
+  font-weight: 600; /* Bolder text */
+  font-size: 1.1em;
+}
+
+.summary-container .color-summary-dot {
+  width: 20px; /* Slightly larger dots */
+  height: 20px;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); /* Dot shadow */
+}
+
+.search-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative; /* For icon positioning */
+}
+
+.search-section input {
+  flex: 1;
+  padding: 12px 18px; /* More padding */
+  padding-left: 45px; /* Space for icon */
+  border-radius: 25px; /* More rounded */
+  border: 1px solid #3A3A3A; /* Lighter border */
+  background-color: #262626; /* Lighter input background */
+  color: #F0F0F0;
+  font-size: 1.1em;
+  transition: all 0.3s ease;
+}
+
+.search-section input:focus {
+  border-color: #8A2BE2; /* Highlight on focus */
+  box-shadow: 0 0 10px rgba(138, 43, 226, 0.5); /* Glow on focus */
+  outline: none;
+}
+
+.search-section::before { /* Search icon */
+  content: '\1F50D'; /* Unicode magnifying glass */
+  font-size: 1.3em;
+  position: absolute;
+  left: 15px;
+  color: #888;
+}
+
+.detailed-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* More space */
+  /* Remove max-height and overflow-y to make it span the entire page as words are added */
+  /* max-height: 350px; */ 
+  /* overflow-y: auto; */
+  padding-right: 0; /* No need for scrollbar space if no overflow */
+}
+
+/* Custom scrollbar for detailed-container - remove if not needed for overflow */
+/*
+.detailed-container::-webkit-scrollbar {
+  width: 8px;
+}
+.detailed-container::-webkit-scrollbar-track {
+  background: #2C2C2C;
+  border-radius: 10px;
+}
+.detailed-container::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 10px;
+}
+.detailed-container::-webkit-scrollbar-thumb:hover {
+  background: #8A2BE2;
+}
+*/
+
+.words-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* More space */
+}
+
+.clickable-word {
+  padding: 8px 15px; /* More padding */
+  border-radius: 15px; /* More rounded */
+  border: 1px solid #4A4A4A; /* Lighter border */
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smoother transition */
+  font-weight: 500;
+  background-color: #262626; /* Slightly darker background */
+  color: #E0E0E0;
+}
+
+.clickable-word:hover {
+  background-color: #8A2BE2; /* Richer hover color */
+  color: #FFFFFF; /* White text on hover */
+  transform: translateY(-2px) scale(1.03); /* Subtle lift and scale */
+  box-shadow: 0 4px 12px rgba(138, 43, 226, 0.4); /* Glow on hover */
+}
+
+textarea#importExportArea {
+  width: 100%;
+  height: 180px; /* Taller textarea */
+  margin-top: 25px;
+  padding: 15px;
+  background-color: #262626; /* Matching input background */
+  color: #F0F0F0;
+  border: 1px solid #3A3A3A;
+  border-radius: 15px; /* More rounded */
+  font-size: 1em;
+  resize: vertical; /* Allow vertical resizing */
+  transition: border-color 0.3s ease;
+}
+
+textarea#importExportArea:focus {
+  border-color: #00BCD4; /* Teal highlight on focus */
+  box-shadow: 0 0 10px rgba(0, 188, 212, 0.5);
+  outline: none;
+}
+
+.action-buttons {
+  margin-top: 20px; /* Space above buttons */
+  display: flex;
+  justify-content: flex-start; /* Align to start */
+  gap: 15px; /* Space between buttons */
+}
+
+.action-buttons button {
+  padding: 10px 20px; /* More padding */
+  border: none;
+  border-radius: 18px; /* More rounded */
+  background-color: #00BCD4; /* Vibrant teal */
+  color: #0D0D0D; /* Dark text for contrast */
+  cursor: pointer;
+  font-weight: 600; /* Bolder text */
+  font-size: 1.05em;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 188, 212, 0.3); /* Subtle shadow */
+}
+
+.action-buttons button:hover {
+  background-color: #00A6B9; /* Darker teal on hover */
+  transform: translateY(-2px); /* Slight lift */
+  box-shadow: 0 8px 20px rgba(0, 188, 212, 0.5); /* Stronger shadow on hover */
+}
+
+.action-buttons button:active {
+  transform: translateY(0); /* Press effect */
+  box-shadow: 0 3px 10px rgba(0, 188, 212, 0.3);
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #1A1A1A; /* Matching container background */
+  padding: 30px; /* More padding */
+  border: 2px solid #8A2BE2; /* Matching purple border */
+  border-radius: 15px; /* More rounded */
+  z-index: 1000;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6); /* Stronger shadow for pop-up */
+  text-align: center;
+}
+
+#colorButtonsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px; /* Space between color buttons */
+  margin-top: 20px;
+}
+
+#colorButtonsContainer button {
+  width: 45px; /* Slightly larger buttons */
+  height: 45px;
+  margin: 5px;
+  border: 2px solid transparent; /* Transparent border for selection */
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+#colorButtonsContainer button:hover {
+  transform: scale(1.1); /* Pop effect on hover */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#colorButtonsContainer button.selected { /* Style for selected color */
+  border-color: #00BCD4; /* Teal border when selected */
+  box-shadow: 0 0 0 3px #8A2BE2, 0 0 15px rgba(0, 188, 212, 0.7); /* Double ring glow */
+}
+
+/* Close button for popup */
+.popup .close-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  color: #F0F0F0;
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.popup .close-button:hover {
+  color: #8A2BE2;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 25px;
+    border-radius: 15px;
+  }
+
+  h1 {
+    font-size: 2.2em;
+  }
+
+  #coloredCount {
+    font-size: 22px;
+  }
+
+  .summary-container {
+    gap: 15px;
+  }
+
+  .search-section input {
+    padding: 10px 15px;
+    padding-left: 40px;
+    font-size: 1em;
+  }
+
+  .clickable-word {
+    padding: 6px 12px;
+    font-size: 0.9em;
+  }
+
+  .action-buttons button {
+    padding: 8px 16px;
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  #coloredCount {
+    font-size: 18px;
+  }
+
+  .summary-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .action-buttons button {
+    width: 100%;
+  }
+
+  .search-section::before {
+    left: 10px;
+  }
+}

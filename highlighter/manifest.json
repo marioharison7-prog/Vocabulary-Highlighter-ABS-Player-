@@ -1,0 +1,48 @@
+{
+  "manifest_version": 3,
+  "name": "Word Highlighter & Notetaker",
+  "version": "1.1",
+  "description": "Highlight words on various web pages, including video captions, add custom colors and notes, and save them for later review.",
+  "permissions": [
+    "storage",
+    "identity",
+    "contextMenus",
+    "scripting",
+    "activeTab",
+    "tabs",
+    "clipboardWrite"
+  ],
+  "host_permissions": [
+    "<all_urls>",
+    "http://localhost/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["tab.html", "tab.js","tab.css"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
