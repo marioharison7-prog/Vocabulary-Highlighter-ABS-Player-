@@ -4,9 +4,14 @@
                                                       🌟 Highlight Project – Language Learning Assistant
 
 
-<img width="1919" height="1073" alt="youtube" src="https://github.com/user-attachments/assets/091e056e-16df-427a-aba4-8384838b8e64" />
-<img width="1919" height="1079" alt="select send" src="https://github.com/user-attachments/assets/233eec70-e455-47e2-8993-6eb1a5942523" />
-<img width="1919" height="1079" alt="poupcolor" src="https://github.com/user-attachments/assets/6c799dd3-84a3-4ecf-81c0-db8cc2d0b206" />                                                      
+            <img width="1919" height="1079" alt="select send" src="https://github.com/user-attachments/assets/985440ce-7765-474f-a3b4-cc5a31c5e0d5" />
+<img width="1919" height="1079" alt="poupcolor" src="https://github.com/user-attachments/assets/a852c772-98da-4973-8939-9dd85c65814d" />
+<img width="1919" height="1079" alt="novelfull" src="https://github.com/user-attachments/assets/b9d5ea3d-3fb1-42a2-b512-75ac31b0c432" />
+<img width="1919" height="1079" alt="defintion poup" src="https://github.com/user-attachments/assets/c52332ee-4981-411a-8064-6152266241b1" />
+<img width="1919" height="1079" alt="count" src="https://github.com/user-attachments/assets/710a5734-ed23-40f4-aca2-f55d1eda7af6" />
+<img width="1919" height="1079" alt="absweb" src="https://github.com/user-attachments/assets/2ed85085-0911-440c-9d5e-38bb4b5d4e3a" />
+         <img width="1919" height="1073" alt="youtube" src="https://github.com/user-attachments/assets/fb5cf09e-0f2e-4b84-ad28-6bde6b147247" />
+                           
 This tool is designed for ABS captions and webpages. You can use it almost anywhere — except when you’re using ABS Player.
 📎 Extension link
 
