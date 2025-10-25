@@ -1,5 +1,12 @@
 
+
+                                                      
                                                       🌟 Highlight Project – Language Learning Assistant
+
+
+<img width="1919" height="1073" alt="youtube" src="https://github.com/user-attachments/assets/091e056e-16df-427a-aba4-8384838b8e64" />
+<img width="1919" height="1079" alt="select send" src="https://github.com/user-attachments/assets/233eec70-e455-47e2-8993-6eb1a5942523" />
+<img width="1919" height="1079" alt="poupcolor" src="https://github.com/user-attachments/assets/6c799dd3-84a3-4ecf-81c0-db8cc2d0b206" />                                                      
 This tool is designed for ABS captions and webpages. You can use it almost anywhere — except when you’re using ABS Player.
 📎 Extension link
 
@@ -47,6 +54,7 @@ Download and install XAMPP from: https://www.apachefriends.org/download.html
 
 Step 2 – Open the XAMPP Directory
 After installation, open the folder: C:\xampp\htdocs
+
 
 
 Step 3 – Add the Extension
