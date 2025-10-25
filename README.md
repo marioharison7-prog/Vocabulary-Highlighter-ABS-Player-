@@ -43,12 +43,18 @@ Because meanings can vary between word forms and phrases. For example, “run”
 🖥️ Installation Guide
 Step 1 – Install XAMPP
 Download and install XAMPP from: https://www.apachefriends.org/download.html
+
+
 Step 2 – Open the XAMPP Directory
 After installation, open the folder: C:\xampp\htdocs
+
+
 Step 3 – Add the Extension
 - Download highlighter.rar (from the project link).
 - Unzip it.
 - Copy the folder into: C:\xampp\htdocs
+
+
 Step 4 – Enable Developer Mode in Chrome
 - Go to chrome://extensions/
 - Enable Developer Mode (top right corner).
