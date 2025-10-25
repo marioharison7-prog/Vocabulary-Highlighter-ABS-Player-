@@ -1,7 +1,5 @@
-Exportez ce message vers un document Word
-Sure! Here's the content from your document converted into clean, structured Markdown:
 
-🌟 Highlight Project – Language Learning Assistant
+                                                      🌟 Highlight Project – Language Learning Assistant
 This tool is designed for ABS captions and webpages. You can use it almost anywhere — except when you’re using ABS Player.
 📎 Extension link
 
